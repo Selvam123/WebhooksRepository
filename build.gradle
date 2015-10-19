@@ -13,12 +13,14 @@ task git << {
 		if(!dir.exists()) {
 			workingDir dirPath
 			dir.mkdirs()
-			def command = 'git clone ' + gitRepo
-			commandLine 'cmd', '/c', command
+			//def command = 'git clone ' + gitRepo
+			//commandLine 'cmd', '/c', command
+			commandLine 'git', 'clone', gitRepo
 			println 'Clone Completed!'
 		} else {
 			workingDir dirPath + repoName
-			commandLine 'cmd', '/c', 'git pull'
+			//commandLine 'cmd', '/c', 'git pull'
+			commandLine 'git', 'pull'
 			println 'Pull Completed!'
 		}
 	}
