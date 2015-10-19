@@ -3,9 +3,9 @@
 <body>
 
 <?php
-$out=`gradle -v`;
-echo "<pre>$out</pre>";
-echo exec("gradle -v");
+	$command = "gradle -v"
+	$output = exec($command);
+	echo "<p>$output</p>";
 ?>
 
 </html>
