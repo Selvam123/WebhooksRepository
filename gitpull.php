@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$output = shell_exec('gradle -v');
+$output = shell_exec('gradle -q git');
 echo "<pre>$output</pre>";
 ?>
 
