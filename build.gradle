@@ -11,7 +11,7 @@ task git << {
 	File dir = new File(repoName);
 	exec {
 		if(!dir.exists()) {
-			workingDir dirPath
+			//workingDir dirPath
 			dir.mkdirs()
 			def command = 'git clone ' + gitRepo
 			commandLine 'cmd', '/c', command
