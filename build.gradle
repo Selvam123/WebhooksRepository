@@ -1,0 +1,25 @@
+import org.gradle.api.tasks.Exec
+
+project.ext{
+	dirPath = dirPath
+	gitRepo = gitRepo
+}
+
+task git << {	
+	String[] getRepo = gitRepo.tokenize("/")
+	def repoName = getRepo[getRepo.length - 1].tokenize(".")[0]
+	File dir = new File(repoName);
+	exec {
+		if(!dir.exists()) {
+			workingDir dirPath
+			dir.mkdirs()
+			def command = 'git clone ' + gitRepo
+			commandLine 'cmd', '/c', command
+			println 'Clone Completed!'
+		} else {
+			workingDir dirPath + repoName
+			commandLine 'cmd', '/c', 'git pull'
+			println 'Pull Completed!'
+		}
+	}
+}
