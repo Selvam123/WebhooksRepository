@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-
+ 
 <?php
-$output = shell_exec('gradle -q git');
+$output=`gradle -v`; 
 echo "<pre>$output</pre>";
 ?>
-
-</html>
-</body>
+ 
