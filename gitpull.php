@@ -3,8 +3,8 @@
 <body>
 
 <?php
-	$command = "gradle -v"
-	$output = exec(.$command.);
+	$command = 'gradle -v';
+	$output = exec($command);
 	echo "<p>$output</p>";
 ?>
 
