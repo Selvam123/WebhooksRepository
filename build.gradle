@@ -17,7 +17,7 @@ task git << {
 			//def command = 'git clone ' + gitRepo
 			//commandLine 'cmd', '/c', command
 			commandLine 'git', 'clone', gitRepo
-			println 'Clone Completed!'
+			println 'Clone Completed!!'
 		} else {
 			workingDir dirPath + repoName
 			//commandLine 'cmd', '/c', 'git pull'
