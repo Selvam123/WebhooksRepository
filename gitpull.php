@@ -4,7 +4,7 @@
 
 <?php
 	$command = "gradle -v"
-	$output = exec($command);
+	$output = exec(.$command.);
 	echo "<p>$output</p>";
 ?>
 
