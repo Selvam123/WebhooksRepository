@@ -1,6 +1,6 @@
  
 <?php
-//$output=`gradle -v`; 
-echo "<pre>output</pre>";
+$output=`gradle -v`; 
+echo "<pre>$output</pre>";
 ?>
  
