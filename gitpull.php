@@ -1,4 +1,4 @@
 <?php
-$out=`gradle -q git`;
+$out=`gradle -v`;
 echo "<pre>$out</pre>";
 ?>
