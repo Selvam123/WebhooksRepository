@@ -9,7 +9,8 @@
               $val2 = 20;
               $sum = $val2 + $val2;   /* Assignment operator */
               echo "Result(SUM): $sum";
+              $output= `gradle -v`; 
+              echo " $output";
 ?>
-
 </body>
 </html>
