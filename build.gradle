@@ -11,16 +11,12 @@ task git << {
 	File dir = new File(repoName);
 	exec {
 		if(!dir.exists()) {
-			workingDir dirPath
-			//dir.mkdirs()
-			commandLine 'mkdir', repoName
-			//def command = 'git clone ' + gitRepo
-			//commandLine 'cmd', '/c', command
+			workingDir dirPath			 
+			commandLine 'mkdir', repoName		 
 			commandLine 'git', 'clone', gitRepo
 			println 'Clone Completed!!'
 		} else {
 			workingDir dirPath + repoName
-			//commandLine 'cmd', '/c', 'git pull'
 			commandLine 'git', 'pull'
 			println 'Pull Completed!'
 		}
